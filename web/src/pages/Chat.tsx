@@ -35,8 +35,16 @@ export default function Chat() {
     const access = session.data.session?.access_token || ''
     const r = await fetch(`${url}/functions/v1/chat`, { method:'POST', headers: { 'Content-Type':'application/json', 'Authorization':`Bearer ${access}`, 'apikey': anon }, body: JSON.stringify({ user_id: userId, prompt: currentPrompt }) })
     let reply = ''
+    let fromCache = false
     if (r.ok) {
-      try { const j = await r.json(); reply = j.response || '' } catch { reply = await r.text() }
+      try { 
+        const j = await r.json(); 
+        reply = j.response || ''
+        fromCache = j.fromCache || false
+        if (fromCache) {
+          console.log('Chat response served from cache')
+        }
+      } catch { reply = await r.text() }
     } else { reply = await r.text() }
 
     await new Promise<void>((resolve) => {

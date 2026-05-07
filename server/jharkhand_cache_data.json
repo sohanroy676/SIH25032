@@ -1,0 +1,467 @@
+{
+  "places": [
+    {
+      "name": "Dassam Falls",
+      "state": "Jharkhand",
+      "type": "nature",
+      "lat": 23.251,
+      "lon": 85.582,
+      "short_desc": "Jharkhand's crown jewel - a magnificent 144-foot waterfall cascading through lush forests, perfect for nature lovers, photographers, and adventure seekers. Located just 40km from Ranchi.",
+      "long_desc": "Dassam Falls stands as one of Jharkhand's most spectacular natural wonders, a breathtaking 144-foot cascade that plunges through dense Sal forests and rocky terrain. Located approximately 40 kilometers from Ranchi, this magnificent waterfall is formed by the Kanchi River, a tributary of the Subarnarekha River. The falls create a mesmerizing spectacle, especially during the monsoon season when the water flow reaches its peak, creating thunderous sounds and misty sprays that can be felt from considerable distances. The surrounding landscape is a paradise for nature enthusiasts, featuring diverse flora and fauna, including rare bird species and indigenous plants. The area around Dassam Falls has been preserved as a natural heritage site, maintaining its pristine beauty while offering modern amenities for visitors. The falls are not just a tourist destination but also hold cultural significance for local tribal communities who consider the area sacred. The combination of natural beauty, accessibility, and cultural richness makes Dassam Falls a must-visit destination for anyone exploring Jharkhand's tourism potential.",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800",
+        "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "tags": ["nature", "waterfall", "picnic", "photography", "adventure", "forest", "monsoon"],
+      "gemini_cache_json": {
+        "name": "Dassam Falls",
+        "long_desc": "Dassam Falls stands as one of Jharkhand's most spectacular natural wonders, a breathtaking 144-foot cascade that plunges through dense Sal forests and rocky terrain. Located approximately 40 kilometers from Ranchi, this magnificent waterfall is formed by the Kanchi River, a tributary of the Subarnarekha River. The falls create a mesmerizing spectacle, especially during the monsoon season when the water flow reaches its peak, creating thunderous sounds and misty sprays that can be felt from considerable distances. The surrounding landscape is a paradise for nature enthusiasts, featuring diverse flora and fauna, including rare bird species and indigenous plants.",
+        "history_summary": "Dassam Falls derives its name from the nearby village of Dassam, which has been inhabited by tribal communities for centuries. The falls have been a significant landmark in the region's history, serving as a natural boundary and water source for local settlements. Archaeological evidence suggests that the area has been inhabited since ancient times, with various tribal groups considering the falls sacred. During the British colonial period, the area was explored and documented as a natural wonder. The falls have been featured in local folklore and traditional stories, making them not just a geographical feature but also a cultural heritage site. The surrounding forests have been protected for generations by local communities who understand the ecological importance of this natural treasure.",
+        "visiting_tips": [
+          "Best visited during monsoon (July-September) for maximum water flow and spectacular views",
+          "Wear comfortable walking shoes with good grip for rocky terrain",
+          "Carry sufficient water, snacks, and basic first aid supplies",
+          "Don't venture too close to the waterfall edge - maintain safe distance",
+          "Early morning visits (6-8 AM) offer better photography opportunities with soft lighting",
+          "Bring rain gear during monsoon season as sudden showers are common",
+          "Respect local tribal customs and traditions when visiting nearby villages",
+          "Carry insect repellent for forest areas, especially during evening hours",
+          "Book accommodation in advance during peak season (July-September)",
+          "Try authentic tribal cuisine at local eateries near the falls",
+          "Carry binoculars for bird watching opportunities",
+          "Wear light, breathable clothing suitable for humid conditions",
+          "Inform someone about your hiking plans and expected return time",
+          "Carry a waterproof bag for electronics and important documents",
+          "Check weather conditions before planning your visit"
+        ],
+        "best_time_to_visit": "July to September (monsoon season) for the most spectacular waterfall experience with maximum water flow, lush greenery, and dramatic misty atmosphere. Winter months (November-February) offer pleasant weather for comfortable exploration, while spring (March-April) showcases blooming flora and moderate water flow.",
+        "safety_notes": [
+          "Be extremely cautious near the waterfall edge - rocks can be slippery",
+          "Avoid visiting during heavy rains or thunderstorms",
+          "Keep children under constant supervision at all times",
+          "Wear non-slip shoes with good traction on wet rocks",
+          "Don't attempt to swim in the pool below the falls",
+          "Follow all posted safety guidelines and warnings",
+          "Inform local authorities about your hiking plans",
+          "Carry a fully charged mobile phone for emergencies",
+          "Stay on designated paths and avoid venturing into dense forest areas alone",
+          "Be aware of wildlife in the surrounding forest areas",
+          "Carry a whistle for emergency signaling",
+          "Avoid visiting during extreme weather conditions",
+          "Don't litter - carry all waste back with you",
+          "Be respectful of the natural environment and local wildlife"
+        ],
+        "local_cuisine": [
+          "Litti Chokha - Traditional Bihari dish with roasted wheat balls and mashed vegetables",
+          "Dhuska - Crispy rice flour pancakes served with spicy curry",
+          "Thekua - Sweet fried cookies made with wheat flour and jaggery",
+          "Mutton Curry - Spicy local preparation with aromatic spices",
+          "Sattu Paratha - Protein-rich flatbread stuffed with roasted gram flour",
+          "Chana Ghugni - Spiced chickpea curry with tangy flavors",
+          "Malpua - Sweet dessert pancake served with rabri",
+          "Pitha - Traditional rice cakes with various sweet and savory fillings",
+          "Bamboo Shoot Curry - Local tribal delicacy with forest ingredients",
+          "Mahua Wine - Traditional tribal alcoholic beverage (consume responsibly)"
+        ],
+        "nearby_attractions": [
+          "Hundru Falls - Another spectacular waterfall 15km away",
+          "Jonha Falls - Scenic waterfall with temple nearby",
+          "Patratu Valley - Beautiful valley with Patratu Dam and reservoir",
+          "Netarhat - Hill station destination known as Queen of Chotanagpur",
+          "Betla National Park - Wildlife sanctuary with tigers and elephants",
+          "Jagannath Temple - Ancient temple in Ranchi with architectural significance",
+          "Rock Garden - Man-made garden attraction with sculptures",
+          "Ranchi Lake - Urban lake perfect for boating and relaxation",
+          "Pahari Mandir - Hilltop temple offering panoramic city views",
+          "Tribal Museum - Cultural museum showcasing local heritage",
+          "Birsa Zoological Park - Wildlife park with diverse animal species",
+          "Deer Park - Nature park with deer and other animals"
+        ],
+        "cultural_significance": "Dassam Falls holds profound cultural significance for local tribal communities, particularly the Munda, Oraon, and Santhal tribes who have inhabited this region for centuries. The falls are considered sacred by many indigenous groups, who believe the area is inhabited by ancestral spirits. Traditional ceremonies and rituals are often performed near the falls during important festivals. The surrounding forests are home to various medicinal plants that have been used in traditional tribal medicine for generations. Local folklore tells stories of the falls being created by divine intervention, making it a spiritual destination for many. The area serves as a living museum of tribal culture, with nearby villages showcasing traditional architecture, handicrafts, and lifestyle. The falls also play a role in local agricultural practices, as the mist and humidity from the waterfall create a microclimate that supports unique vegetation.",
+        "photography_spots": [
+          "Main waterfall viewpoint - Best angle for capturing the full cascade",
+          "Forest trail entrance - Dramatic shots with forest canopy framing",
+          "Tribal village outskirts - Cultural photography opportunities",
+          "Sunrise point near falls - Golden hour lighting for spectacular shots",
+          "River confluence area - Where Kanchi meets Subarnarekha",
+          "Rock formations around falls - Unique geological features",
+          "Local market area - Vibrant cultural scenes and local life",
+          "Bird watching spots - Capture diverse avian species",
+          "Misty morning views - Atmospheric shots during monsoon",
+          "Tribal hut settlements - Traditional architecture photography",
+          "Forest canopy walkway - Elevated perspective shots",
+          "Waterfall base pool - Close-up shots of cascading water"
+        ],
+        "suggested_itinerary_snippet": [
+          { "time": "Early Morning", "activity": "Depart from Ranchi (6:00 AM)" },
+          { "time": "Morning", "activity": "Reach Dassam Falls (8:00 AM)" },
+          { "time": "Morning", "activity": "Photography session (8:30-10:00 AM)" },
+          { "time": "Late Morning", "activity": "Nature walk and exploration (10:00-11:30 AM)" },
+          { "time": "Noon", "activity": "Picnic lunch (12:00-1:00 PM)" },
+          { "time": "Afternoon", "activity": "Tribal village visit (1:30-3:00 PM)" },
+          { "time": "Late Afternoon", "activity": "Local market shopping (3:00-4:00 PM)" },
+          { "time": "Evening", "activity": "Return to Ranchi (4:30 PM)" }
+        ],
+        "detailed_itinerary": [
+          {
+            "day": 1,
+            "summary": "Complete Dassam Falls exploration with photography and nature walks",
+            "activities": [
+              { "time": "6:00 AM", "title": "Early departure from Ranchi", "details": "Start your journey from Ranchi city center with packed breakfast", "transport": "Private car or taxi", "difficulty": "easy" },
+              { "time": "8:00 AM", "title": "Arrive at Dassam Falls", "details": "Reach the waterfall parking area and prepare for exploration", "transport": "On foot", "difficulty": "easy" },
+              { "time": "8:30 AM", "title": "Photography session", "details": "Capture the falls in morning light with misty atmosphere", "transport": "Walking", "difficulty": "easy" },
+              { "time": "10:00 AM", "title": "Nature walk and exploration", "details": "Explore forest trails and discover local flora and fauna", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "11:30 AM", "title": "Bird watching", "details": "Spot and photograph various bird species in the area", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "12:30 PM", "title": "Picnic lunch", "details": "Enjoy a packed lunch with waterfall views", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "2:00 PM", "title": "Tribal village visit", "details": "Interact with local communities and learn about their culture", "transport": "Walking", "difficulty": "easy" },
+              { "time": "3:30 PM", "title": "Local market shopping", "details": "Shop for traditional handicrafts and local products", "transport": "Walking", "difficulty": "easy" },
+              { "time": "4:30 PM", "title": "Return journey", "details": "Head back to Ranchi with memories and souvenirs", "transport": "Private car", "difficulty": "easy" }
+            ]
+          },
+          {
+            "day": 2,
+            "summary": "Extended exploration including nearby attractions and cultural experiences",
+            "activities": [
+              { "time": "7:00 AM", "title": "Early morning departure", "details": "Leave early to visit Hundru Falls", "transport": "Private vehicle", "difficulty": "easy" },
+              { "time": "8:30 AM", "title": "Hundru Falls exploration", "details": "Visit the second major waterfall in the area", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "10:30 AM", "title": "Jonha Falls visit", "details": "Explore the third waterfall with temple nearby", "transport": "Private vehicle", "difficulty": "easy" },
+              { "time": "12:00 PM", "title": "Traditional lunch", "details": "Enjoy authentic Jharkhand cuisine at local restaurant", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "1:30 PM", "title": "Patratu Valley exploration", "details": "Visit the scenic valley with dam and reservoir", "transport": "Private vehicle", "difficulty": "easy" },
+              { "time": "3:00 PM", "title": "Cultural museum visit", "details": "Learn about tribal heritage and traditions", "transport": "Walking", "difficulty": "easy" },
+              { "time": "4:30 PM", "title": "Return to accommodation", "details": "Head back to Ranchi for rest and dinner", "transport": "Private vehicle", "difficulty": "easy" }
+            ]
+          },
+          {
+            "day": 3,
+            "summary": "Relaxation, local experiences, and final exploration",
+            "activities": [
+              { "time": "9:00 AM", "title": "Leisurely breakfast", "details": "Enjoy a relaxed morning meal", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "10:30 AM", "title": "Return to Dassam Falls", "details": "Final visit for relaxation and meditation", "transport": "Private car", "difficulty": "easy" },
+              { "time": "11:00 AM", "title": "Meditation and relaxation", "details": "Find peaceful spots for reflection and mindfulness", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "12:30 PM", "title": "Final photography session", "details": "Capture any missed shots or different angles", "transport": "Walking", "difficulty": "easy" },
+              { "time": "1:30 PM", "title": "Traditional farewell lunch", "details": "Enjoy final meal with local specialties", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "3:00 PM", "title": "Final shopping", "details": "Purchase last-minute souvenirs and gifts", "transport": "Walking", "difficulty": "easy" },
+              { "time": "4:00 PM", "title": "Departure", "details": "Leave for your next destination with unforgettable memories", "transport": "Private vehicle", "difficulty": "easy" }
+            ]
+          }
+        ],
+        "budget_estimates": {
+          "budget": {
+            "accommodation": "₹500-1000 per night (guesthouses, homestays)",
+            "food": "₹200-400 per day (local eateries, street food)",
+            "transport": "₹1000-1500 (local buses, shared transport)",
+            "activities": "₹200-500 (entry fees, basic guides)"
+          },
+          "mid_range": {
+            "accommodation": "₹1500-3000 per night (hotels, resorts)",
+            "food": "₹500-800 per day (restaurants, cafes)",
+            "transport": "₹2000-3000 (private car, taxi)",
+            "activities": "₹500-1000 (tours, photography guides)"
+          },
+          "luxury": {
+            "accommodation": "₹5000+ per night (luxury resorts, heritage properties)",
+            "food": "₹1000+ per day (fine dining, specialty restaurants)",
+            "transport": "₹4000+ (luxury car with driver, helicopter tours)",
+            "activities": "₹1500+ (premium experiences, private guides)"
+          }
+        },
+        "transportation_options": [
+          "Private car from Ranchi (40 km, 1.5 hours)",
+          "Public bus from Ranchi bus stand",
+          "Taxi or cab service (one-way or round trip)",
+          "Motorcycle rental for adventure enthusiasts",
+          "Shared jeep from nearby towns and villages",
+          "Tourist bus packages with guided tours",
+          "Self-drive car rental from Ranchi",
+          "Bicycle tour for eco-friendly exploration",
+          "Helicopter tours (premium option)",
+          "Local auto-rickshaw for short distances"
+        ],
+        "accommodation_suggestions": [
+          "Budget guesthouses in nearby villages",
+          "Mid-range hotels in Ranchi city",
+          "Resort stays near waterfalls with nature views",
+          "Homestays with local tribal families",
+          "Camping sites with proper permissions",
+          "Government rest houses and guest houses",
+          "Eco-lodges in forest areas",
+          "Heritage properties with traditional architecture",
+          "Luxury resorts with spa facilities",
+          "Farm stays with agricultural experiences"
+        ],
+        "local_festivals": [
+          "Sarhul Festival (March-April) - Spring festival celebrating nature",
+          "Karma Festival (August) - Agricultural festival honoring nature",
+          "Tusu Festival (January) - Harvest festival with traditional dances",
+          "Monsoon Festival (July-August) - Celebrating the rainy season",
+          "Tribal Cultural Festival (December) - Showcasing local traditions",
+          "Waterfall Festival (September) - Dedicated to natural wonders",
+          "Forest Festival (October) - Celebrating biodiversity and conservation"
+        ],
+        "shopping_recommendations": [
+          "Traditional tribal handicrafts and artifacts",
+          "Bamboo products including baskets and furniture",
+          "Local pottery and ceramic items",
+          "Tribal jewelry and traditional ornaments",
+          "Handwoven textiles and fabrics",
+          "Wooden artifacts and carvings",
+          "Local spices and condiments",
+          "Traditional musical instruments",
+          "Medicinal herbs and forest products",
+          "Tribal paintings and artwork",
+          "Stone carvings and sculptures",
+          "Traditional clothing and accessories"
+        ]
+      },
+      "gemini_cached_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "name": "Hundru Falls",
+      "state": "Jharkhand",
+      "type": "nature",
+      "lat": 23.284,
+      "lon": 85.358,
+      "short_desc": "Tall waterfall on the Subarnarekha River with beautiful viewpoints.",
+      "long_desc": "Hundru Falls is one of the most spectacular waterfalls in Jharkhand, cascading down from a height of about 98 meters. Located on the Subarnarekha River, it's a popular destination for nature enthusiasts and adventure seekers. The falls create a magnificent sight as the water plunges down the rocky cliffs, surrounded by dense forests and hills. The area offers excellent opportunities for photography, especially during the monsoon season when the water flow is at its peak.",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800"
+      ],
+      "tags": ["nature", "waterfall", "river"],
+      "gemini_cache_json": {
+        "name": "Hundru Falls",
+        "long_desc": "Hundru Falls is one of the most spectacular waterfalls in Jharkhand, cascading down from a height of about 98 meters. Located on the Subarnarekha River, it's a popular destination for nature enthusiasts and adventure seekers.",
+        "history_summary": "The falls are formed by the Subarnarekha River as it flows through the Ranchi plateau. The name 'Hundru' comes from the local tribal language and has been a significant landmark for centuries.",
+        "visiting_tips": [
+          "Visit during monsoon for the best water flow",
+          "Carry rain gear during monsoon season",
+          "Wear non-slip shoes for safety",
+          "Bring camera for amazing photo opportunities",
+          "Early morning visits offer better lighting"
+        ],
+        "best_time_to_visit": "July to October for optimal waterfall experience",
+        "safety_notes": [
+          "Stay away from the edge of the falls",
+          "Be careful on wet rocks",
+          "Follow safety guidelines",
+          "Don't swim in the pool below the falls"
+        ],
+        "suggested_itinerary_snippet": [
+          { "time": "Morning", "activity": "Travel to Hundru Falls" },
+          { "time": "10 AM", "activity": "Explore the waterfall" },
+          { "time": "12 PM", "activity": "Lunch break" },
+          { "time": "2 PM", "activity": "Return journey" }
+        ],
+        "detailed_itinerary": [
+          {
+            "day": 1,
+            "summary": "Full day exploration of Hundru Falls",
+            "activities": [
+              { "time": "7:00 AM", "title": "Early departure", "details": "Leave early to avoid crowds", "transport": "Private vehicle", "difficulty": "easy" },
+              { "time": "9:00 AM", "title": "Arrive at Hundru Falls", "details": "Reach the waterfall location", "transport": "Walking", "difficulty": "easy" },
+              { "time": "10:00 AM", "title": "Waterfall viewing", "details": "Enjoy the spectacular waterfall", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "11:00 AM", "title": "Nature walk", "details": "Explore the surrounding forest area", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "12:30 PM", "title": "Picnic lunch", "details": "Enjoy lunch with waterfall views", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "2:00 PM", "title": "Photography session", "details": "Capture the beauty of the falls", "transport": "Walking", "difficulty": "easy" },
+              { "time": "3:30 PM", "title": "Return journey", "details": "Head back to base", "transport": "Private vehicle", "difficulty": "easy" }
+            ]
+          },
+          {
+            "day": 2,
+            "summary": "Adventure and exploration day",
+            "activities": [
+              { "time": "8:00 AM", "title": "Hiking trails", "details": "Explore hiking paths around the falls", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "10:00 AM", "title": "Bird watching", "details": "Spot local bird species", "transport": "Walking", "difficulty": "easy" },
+              { "time": "12:00 PM", "title": "Local interaction", "details": "Meet local communities", "transport": "Walking", "difficulty": "easy" },
+              { "time": "2:00 PM", "title": "Relaxation", "details": "Enjoy peaceful moments by the falls", "transport": "Stationary", "difficulty": "easy" }
+            ]
+          },
+          {
+            "day": 3,
+            "summary": "Cultural and relaxation day",
+            "activities": [
+              { "time": "9:00 AM", "title": "Cultural visit", "details": "Learn about local traditions", "transport": "Walking", "difficulty": "easy" },
+              { "time": "11:00 AM", "title": "Handicraft shopping", "details": "Buy local crafts and souvenirs", "transport": "Walking", "difficulty": "easy" },
+              { "time": "1:00 PM", "title": "Final meal", "details": "Enjoy traditional local food", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "3:00 PM", "title": "Departure", "details": "Leave for next destination", "transport": "Private vehicle", "difficulty": "easy" }
+            ]
+          }
+        ]
+      },
+      "gemini_cached_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "name": "Netarhat",
+      "state": "Jharkhand",
+      "type": "nature",
+      "lat": 23.471,
+      "lon": 84.267,
+      "short_desc": "Hill station known as the Queen of Chotanagpur with cool climate.",
+      "long_desc": "Netarhat is a beautiful hill station located in the Latehar district of Jharkhand, often called the 'Queen of Chotanagpur'. Situated at an altitude of about 1,128 meters above sea level, it offers a pleasant climate throughout the year, making it a perfect escape from the heat of the plains. The area is known for its dense forests, scenic viewpoints, and peaceful atmosphere. Netarhat is particularly famous for its sunrise and sunset views, which are considered among the best in the region.",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800"
+      ],
+      "tags": ["nature", "hill", "climate"],
+      "gemini_cache_json": {
+        "name": "Netarhat",
+        "long_desc": "Netarhat is a beautiful hill station located in the Latehar district of Jharkhand, often called the 'Queen of Chotanagpur'. Situated at an altitude of about 1,128 meters above sea level, it offers a pleasant climate throughout the year.",
+        "history_summary": "Netarhat was developed as a hill station during the British colonial period. The name 'Netarhat' means 'place of the sun' in the local language, referring to the spectacular sunrise views.",
+        "visiting_tips": [
+          "Best visited during winter (November-February) for clear views",
+          "Carry warm clothes as temperatures can drop significantly",
+          "Don't miss the sunrise and sunset viewpoints",
+          "Book accommodation in advance during peak season",
+          "Try local tribal cuisine"
+        ],
+        "best_time_to_visit": "November to February for the best weather and clear views",
+        "safety_notes": [
+          "Be careful on steep viewpoints",
+          "Follow local guidelines for forest areas",
+          "Keep warm clothing handy",
+          "Inform someone about your hiking plans"
+        ],
+        "suggested_itinerary_snippet": [
+          { "time": "Early Morning", "activity": "Sunrise viewing" },
+          { "time": "Morning", "activity": "Nature walks" },
+          { "time": "Afternoon", "activity": "Local exploration" },
+          { "time": "Evening", "activity": "Sunset viewing" }
+        ],
+        "detailed_itinerary": [
+          {
+            "day": 1,
+            "summary": "Arrival and sunset viewing",
+            "activities": [
+              { "time": "2:00 PM", "title": "Arrival at Netarhat", "details": "Check into accommodation", "transport": "Private vehicle", "difficulty": "easy" },
+              { "time": "3:30 PM", "title": "Local exploration", "details": "Walk around the hill station", "transport": "Walking", "difficulty": "easy" },
+              { "time": "5:00 PM", "title": "Sunset point visit", "details": "Head to sunset viewpoint", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "6:30 PM", "title": "Sunset viewing", "details": "Enjoy spectacular sunset", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "8:00 PM", "title": "Dinner", "details": "Enjoy local cuisine", "transport": "Stationary", "difficulty": "easy" }
+            ]
+          },
+          {
+            "day": 2,
+            "summary": "Sunrise and nature exploration",
+            "activities": [
+              { "time": "5:30 AM", "title": "Early morning departure", "details": "Head to sunrise point", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "6:00 AM", "title": "Sunrise viewing", "details": "Watch spectacular sunrise", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "8:00 AM", "title": "Breakfast", "details": "Enjoy morning meal", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "9:30 AM", "title": "Nature walk", "details": "Explore forest trails", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "12:00 PM", "title": "Lunch", "details": "Rest and refuel", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "2:00 PM", "title": "Local village visit", "details": "Interact with local communities", "transport": "Walking", "difficulty": "easy" },
+              { "time": "4:00 PM", "title": "Relaxation", "details": "Enjoy peaceful atmosphere", "transport": "Stationary", "difficulty": "easy" }
+            ]
+          },
+          {
+            "day": 3,
+            "summary": "Adventure and cultural experiences",
+            "activities": [
+              { "time": "8:00 AM", "title": "Hiking adventure", "details": "Explore higher trails", "transport": "Walking", "difficulty": "hard" },
+              { "time": "11:00 AM", "title": "Photography session", "details": "Capture scenic beauty", "transport": "Walking", "difficulty": "easy" },
+              { "time": "1:00 PM", "title": "Cultural lunch", "details": "Experience local food", "transport": "Stationary", "difficulty": "easy" },
+              { "time": "3:00 PM", "title": "Shopping", "details": "Buy local handicrafts", "transport": "Walking", "difficulty": "easy" },
+              { "time": "5:00 PM", "title": "Final sunset", "details": "Last sunset viewing", "transport": "Walking", "difficulty": "moderate" },
+              { "time": "7:00 PM", "title": "Departure", "details": "Leave for next destination", "transport": "Private vehicle", "difficulty": "easy" }
+            ]
+          }
+        ]
+      },
+      "gemini_cached_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "name": "Betla National Park",
+      "state": "Jharkhand",
+      "type": "nature",
+      "lat": 23.847,
+      "lon": 84.199,
+      "short_desc": "Wildlife reserve with elephants, tigers and rich biodiversity.",
+      "long_desc": "Betla National Park is one of the most important wildlife sanctuaries in Jharkhand, covering an area of about 1,026 square kilometers. The park is home to a diverse range of wildlife including elephants, tigers, leopards, deer, and numerous bird species. The park's landscape consists of dense forests, grasslands, and water bodies, providing an ideal habitat for wildlife. It's a paradise for nature lovers and wildlife enthusiasts, offering opportunities for jungle safaris, bird watching, and nature photography.",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800"
+      ],
+      "tags": ["nature", "wildlife", "park"],
+      "gemini_cached_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "name": "Patratu Valley",
+      "state": "Jharkhand",
+      "type": "nature",
+      "lat": 23.567,
+      "lon": 85.234,
+      "short_desc": "Scenic valley with Patratu Dam and beautiful landscapes.",
+      "long_desc": "Patratu Valley is a picturesque destination known for its scenic beauty and the Patratu Dam. The valley offers stunning views of the surrounding hills and the dam reservoir. It's a popular spot for picnics, photography, and enjoying the peaceful natural environment. The area is particularly beautiful during the monsoon season when the hills are covered with lush greenery.",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800"
+      ],
+      "tags": ["nature", "valley", "dam"],
+      "gemini_cached_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "name": "Jagannath Temple",
+      "state": "Jharkhand",
+      "type": "historical",
+      "lat": 23.344,
+      "lon": 85.309,
+      "short_desc": "Ancient temple in Ranchi dedicated to Lord Jagannath.",
+      "long_desc": "The Jagannath Temple in Ranchi is an ancient temple dedicated to Lord Jagannath, a form of Lord Krishna. The temple is known for its architectural beauty and spiritual significance. It attracts devotees from all over the country, especially during festivals. The temple complex includes several smaller shrines and offers a peaceful environment for prayer and meditation.",
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+        "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800"
+      ],
+      "tags": ["historical", "temple", "religious"],
+      "gemini_cached_at": "2024-01-15T10:00:00Z"
+    }
+  ],
+  "festivals": [
+    {
+      "name": "Sarhul Festival",
+      "state": "Jharkhand",
+      "date_pattern": "March-April",
+      "short_desc": "Spring festival celebrated by tribal communities",
+      "long_desc": "Sarhul is one of the most important festivals in Jharkhand, celebrated by the tribal communities to mark the beginning of spring and the agricultural season. The festival involves worshiping the Sal tree, which is considered sacred. People offer prayers, perform traditional dances, and celebrate the abundance of nature.",
+      "video_360_link": null
+    },
+    {
+      "name": "Karma Festival",
+      "state": "Jharkhand",
+      "date_pattern": "August",
+      "short_desc": "Agricultural festival celebrating nature and farming",
+      "long_desc": "Karma Festival is celebrated by various tribal communities in Jharkhand to honor the Karma tree and celebrate agricultural prosperity. The festival involves traditional dances, songs, and rituals that express gratitude to nature for providing sustenance.",
+      "video_360_link": null
+    },
+    {
+      "name": "Tusu Festival",
+      "state": "Jharkhand",
+      "date_pattern": "January",
+      "short_desc": "Harvest festival celebrated by Santhal tribe",
+      "long_desc": "Tusu Festival is a harvest festival celebrated by the Santhal tribe in Jharkhand. It marks the end of the harvest season and involves community celebrations, traditional dances, and feasting. The festival is a time for families to come together and celebrate the abundance of the harvest.",
+      "video_360_link": null
+    }
+  ],
+  "chat_responses": [
+    {
+      "prompt": "What are the best places to visit in Jharkhand?",
+      "response": "Jharkhand offers amazing destinations! Here are the top places to visit:\n\n1. **Dassam Falls** - A beautiful waterfall near Ranchi, perfect for day trips\n2. **Hundru Falls** - Spectacular waterfall on Subarnarekha River\n3. **Netarhat** - Known as Queen of Chotanagpur, a cool hill station\n4. **Betla National Park** - Wildlife reserve with elephants and tigers\n5. **Patratu Valley** - Scenic valley with dam and landscapes\n6. **Jagannath Temple** - Ancient temple in Ranchi\n\nBest time to visit is during monsoon (July-September) for waterfalls, or winter (November-February) for comfortable weather.",
+      "language": null
+    },
+    {
+      "prompt": "Tell me about Jharkhand tourism",
+      "response": "Jharkhand is a beautiful state in eastern India known for its natural beauty, waterfalls, and tribal culture. Here's what makes it special:\n\n**Natural Attractions:**\n- Multiple stunning waterfalls (Dassam, Hundru, Jonha)\n- Hill stations like Netarhat\n- National parks and wildlife sanctuaries\n- Scenic valleys and dams\n\n**Cultural Heritage:**\n- Rich tribal traditions and festivals\n- Ancient temples and historical sites\n- Traditional handicrafts and art\n\n**Best Time to Visit:**\n- Monsoon (July-September) for waterfalls\n- Winter (November-February) for pleasant weather\n- Spring (March-April) for festivals\n\n**Access:**\n- Well connected by road and rail\n- Ranchi is the main hub\n- Domestic flights available",
+      "language": null
+    },
+    {
+      "prompt": "What is special about Dassam Falls?",
+      "response": "Dassam Falls is one of Jharkhand's most spectacular waterfalls! Here's what makes it special:\n\n**Natural Beauty:**\n- Cascades down from 144 feet height\n- Formed by Kanchi River (tributary of Subarnarekha)\n- Surrounded by lush green forests\n- Perfect for photography and nature lovers\n\n**Best Time to Visit:**\n- Monsoon season (July-September) for maximum water flow\n- Early morning for better lighting and fewer crowds\n\n**Activities:**\n- Photography and nature walks\n- Picnic with family and friends\n- Explore surrounding forest trails\n- Visit nearby tribal villages\n\n**Travel Tips:**\n- Located 40 km from Ranchi\n- Wear comfortable walking shoes\n- Carry water and snacks\n- Don't venture too close to the falls edge\n\n**Itinerary:**\nPerfect for a day trip from Ranchi, or extend to 2-3 days to explore the surrounding area and local culture.",
+      "language": null
+    },
+    {
+      "prompt": "Tell me about Netarhat hill station",
+      "response": "Netarhat is Jharkhand's crown jewel - known as the 'Queen of Chotanagpur'! Here's why it's special:\n\n**Location & Climate:**\n- Situated at 1,128 meters altitude\n- Pleasant climate year-round\n- Perfect escape from plains heat\n- Located in Latehar district\n\n**Main Attractions:**\n- Spectacular sunrise and sunset viewpoints\n- Dense forests and scenic trails\n- Peaceful hill station atmosphere\n- Cool mountain air\n\n**Best Time to Visit:**\n- Winter (November-February) for clear views\n- Avoid monsoon for better visibility\n- Spring for pleasant weather\n\n**Activities:**\n- Sunrise and sunset viewing\n- Nature walks and hiking\n- Photography\n- Local village exploration\n- Relaxation in peaceful environment\n\n**Travel Tips:**\n- Carry warm clothes (temperatures drop significantly)\n- Book accommodation in advance\n- Try local tribal cuisine\n- Don't miss the sunrise point\n\n**Perfect for:**\n- Weekend getaways\n- Nature lovers\n- Photography enthusiasts\n- Peace seekers",
+      "language": null
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { crypto } from "https://deno.land/std@0.168.0/crypto/mod.ts";
 
 function makeCorsHeaders(origin: string | null) {
   const allowOrigin = origin && origin.startsWith('http') ? origin : '*';
@@ -12,6 +13,16 @@ function makeCorsHeaders(origin: string | null) {
 }
 
 type ChatBody = { user_id: string; prompt: string; session_id?: string; language?: string };
+
+async function generatePromptHash(prompt: string, language?: string): Promise<string> {
+  const normalizedPrompt = prompt.toLowerCase().trim();
+  const text = `${normalizedPrompt}_${language || 'en'}`;
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
 
 async function callGemini(prompt: string, language?: string) {
   const GEMINI_API_KEY = Deno.env.get('GEMINI_API_KEY');
@@ -42,7 +53,41 @@ serve(async (req) => {
   const body = await req.json().catch(() => null) as ChatBody | null;
   if (!body?.user_id || !body?.prompt) return new Response('user_id and prompt required', { status: 400, headers: { ...cors } });
 
-  const reply = await callGemini(body.prompt, body.language);
+  let reply = '';
+  let fromCache = false;
+
+  // Check cache first
+  const promptHash = await generatePromptHash(body.prompt, body.language);
+  const cachedResponse = await fetch(`${url}/rest/v1/chat_cache?prompt_hash=eq.${promptHash}&expires_at=gte.${new Date().toISOString()}&select=response`, {
+    headers: { 'Authorization': `Bearer ${key}`, 'apiKey': key }
+  });
+
+  if (cachedResponse.ok) {
+    const cachedData = await cachedResponse.json();
+    if (cachedData && cachedData[0] && cachedData[0].response) {
+      reply = cachedData[0].response;
+      fromCache = true;
+      console.log('[chat] using cached response');
+    }
+  }
+
+  // If no cache, call Gemini
+  if (!fromCache) {
+    reply = await callGemini(body.prompt, body.language);
+    
+    // Store in cache
+    await fetch(`${url}/rest/v1/chat_cache`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${key}`, 'apiKey': key },
+      body: JSON.stringify({
+        prompt_hash: promptHash,
+        prompt: body.prompt,
+        response: reply,
+        language: body.language,
+        expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString() // 1 day cache
+      })
+    });
+  }
 
   const ins = await fetch(`${url}/rest/v1/chats`, {
     method: 'POST',
@@ -51,7 +96,7 @@ serve(async (req) => {
   });
   if (!ins.ok) return new Response(await ins.text(), { status: 400, headers: { ...cors } });
 
-  return new Response(JSON.stringify({ response: reply }), { headers: { 'content-type': 'application/json', ...cors } });
+  return new Response(JSON.stringify({ response: reply, fromCache }), { headers: { 'content-type': 'application/json', ...cors } });
 });
 
 

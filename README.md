@@ -8,10 +8,11 @@ Tech Stack (prototype)
 
 - Frontend (prototype): Streamlit (Python 3.10+)
 - Backend/services: Supabase (local via Supabase CLI + Docker), Supabase Edge Functions (TypeScript)
-- LLM: Google Gemini API (server-side only)
+- LLM: Google Gemini API (server-side only) with intelligent caching
 - Images: Unsplash API (free) or placeholder; cache to Supabase Storage
 - Maps: Leaflet + OpenStreetMap embeds, Google Maps URL scheme for directions
 - Monitoring (optional): Sentry, simple analytics events table in Postgres
+- Caching: Multi-layer caching system for improved performance
 
 Monorepo Layout
 
@@ -149,6 +150,40 @@ Troubleshooting
 - If Supabase CLI cannot start, confirm Docker Desktop is running and WSL2 integration is enabled.
 - Regenerate keys with supabase status and update .env.
 - For Windows PowerShell execution policy issues, run: Set-ExecutionPolicy -Scope Process RemoteSigned
+
+Caching System
+
+The application implements a comprehensive caching system to improve performance and reduce API costs:
+
+**Cache Types:**
+- **Places Cache**: Caches Gemini responses for tourist places (7-day TTL)
+- **Place Details Cache**: Caches detailed place information and itineraries (7-day TTL)
+- **Festivals Cache**: Caches festival data by state (7-day TTL)
+- **Chat Cache**: Caches similar chat prompts and responses (1-day TTL)
+
+**Cache Management:**
+```bash
+# Clean up expired cache entries
+node server/cache_management.js cleanup
+
+# View cache statistics
+node server/cache_management.js stats
+
+# Clear all cache (use with caution)
+node server/cache_management.js clear
+```
+
+**Cache Benefits:**
+- Faster response times for repeated queries
+- Reduced Gemini API usage and costs
+- Improved user experience with instant responses
+- Automatic cache expiration and cleanup
+
+**Cache Strategy:**
+- Places and festivals are cached for 7 days (tourism data changes slowly)
+- Chat responses are cached for 1 day (more dynamic content)
+- Cache is checked before making Gemini API calls
+- Automatic cleanup of expired entries
 
 License
 

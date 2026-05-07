@@ -24,21 +24,30 @@ async function callGemini(state: string): Promise<Place[]> {
   const GEMINI_API_KEY = Deno.env.get('GEMINI_API_KEY');
   if (!GEMINI_API_KEY) throw new Error('GEMINI_API_KEY missing');
   const prompt = `
-You are a travel-data assistant.
+You are an expert travel guide specializing in Indian tourism destinations.
+
 TASK: Return ONLY a JSON array (no prose) of up to 12 notable tourist places for the Indian state "${state}".
+
 Each array item MUST strictly be an object with these fields:
 {
   "name": string,
-  "short_desc": string,         // <= 30 words, plain text
-  "tags": string[],             // e.g. ["nature","historical","waterfall"]
+  "short_desc": string,         // 40-60 words, engaging description
+  "tags": string[],             // e.g. ["nature","historical","waterfall","adventure"]
   "likely_coordinates": {"lat": number, "lon": number} | null,
   "likely_festivals": [{"name": string, "dateShort"?: string}],
-  "confidence_score": number    // 0..1
+  "confidence_score": number,   // 0..1
+  "category": string,           // "nature", "historical", "cultural", "adventure", "religious"
+  "best_season": string,        // "monsoon", "winter", "summer", "year-round"
+  "highlights": string[]        // 3-5 key highlights/features
 }
+
 RULES:
-- Respond ONLY with a valid JSON array (no markdown, no backticks, no commentary).
-- If unsure about coordinates, set likely_coordinates to null.
-- Prefer well-known locations in ${state}.
+- Respond ONLY with a valid JSON array (no markdown, no backticks, no commentary)
+- Include diverse types of attractions (nature, history, culture, adventure)
+- Focus on well-known, accessible destinations
+- Provide accurate coordinates when possible
+- Make descriptions engaging and informative
+- Include local festivals and seasonal information
 `;
   const res = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' + GEMINI_API_KEY, {
     method: 'POST',
@@ -92,13 +101,50 @@ serve(async (req) => {
 
   const { state } = await req.json().catch(() => ({ state: 'Jharkhand' }));
   console.log('[places-fetch] requested state:', state);
+  
+  // Check cache first - look for places cached within last 7 days
+  const cacheThreshold = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+  const cachedPlaces = await fetch(`${url}/rest/v1/places?state=eq.${state}&gemini_cached_at=gte.${cacheThreshold}&select=gemini_cache_json,name,short_desc,lat,lon,tags,images`, {
+    headers: { 'Authorization': `Bearer ${key}`, 'apiKey': key }
+  });
+  
   let places: Place[] = [];
-  try {
-    places = await callGemini(state);
-    console.log('[places-fetch] gemini places length:', Array.isArray(places) ? places.length : 'not-array');
-  } catch (e) {
-    console.error('[places-fetch] gemini error:', e);
-    return new Response(`Gemini error: ${String(e)}`, { status: 500, headers: { ...corsHeaders } });
+  let fromCache = false;
+  
+  if (cachedPlaces.ok) {
+    const cachedData = await cachedPlaces.json();
+    console.log('[places-fetch] cached data found:', cachedData.length, 'entries');
+    
+    if (Array.isArray(cachedData) && cachedData.length > 0) {
+      // Check if we have valid cached content
+      const validCachedPlaces = cachedData.filter(item => 
+        item.gemini_cache_json && 
+        item.gemini_cache_json.name && 
+        item.gemini_cache_json.short_desc
+      );
+      
+      if (validCachedPlaces.length > 0) {
+        places = validCachedPlaces.map(item => item.gemini_cache_json);
+        fromCache = true;
+        console.log('[places-fetch] using cached places:', places.length);
+      } else {
+        console.log('[places-fetch] cached data found but invalid, will call Gemini');
+      }
+    }
+  }
+  
+  // If no valid cache, call Gemini
+  if (!fromCache || places.length === 0) {
+    console.log('[places-fetch] calling Gemini API for state:', state);
+    try {
+      places = await callGemini(state);
+      console.log('[places-fetch] gemini places length:', Array.isArray(places) ? places.length : 'not-array');
+    } catch (e) {
+      console.error('[places-fetch] gemini error:', e);
+      return new Response(`Gemini error: ${String(e)}`, { status: 500, headers: { ...corsHeaders } });
+    }
+  } else {
+    console.log('[places-fetch] serving from cache, skipping Gemini call');
   }
 
   // Fallback: seed a minimal list if Gemini returned nothing
@@ -153,7 +199,27 @@ serve(async (req) => {
     }
   }
 
-  return new Response(JSON.stringify({ state, received: places.length, inserted, failed: failures.slice(0, 5) }), { headers: { 'content-type': 'application/json', ...corsHeaders } });
+  // Return the places data directly for immediate frontend display
+  const placesForFrontend = places.map(p => ({
+    place_id: crypto.randomUUID(), // Generate temporary ID for frontend
+    name: p.name,
+    short_desc: p.short_desc,
+    images: [], // Will be populated by the upsert process
+    lat: p.likely_coordinates?.lat ?? null,
+    lon: p.likely_coordinates?.lon ?? null,
+    tags: Array.isArray(p.tags) ? p.tags : [],
+    type: Array.isArray(p.tags) && p.tags.length > 0 ? 
+      ['nature','historical','cultural'].includes(p.tags[0]?.toLowerCase()) ? p.tags[0].toLowerCase() : null : null
+  }));
+
+  return new Response(JSON.stringify({ 
+    state, 
+    places: placesForFrontend,
+    received: places.length, 
+    inserted, 
+    failed: failures.slice(0, 5), 
+    fromCache 
+  }), { headers: { 'content-type': 'application/json', ...corsHeaders } });
 });
 
 

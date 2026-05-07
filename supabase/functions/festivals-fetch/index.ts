@@ -31,7 +31,40 @@ serve(async (req) => {
   if (!url || !key) return new Response('Server not configured', { status: 500 });
   const { state } = await req.json().catch(() => ({ state: 'Jharkhand' }));
 
-  const festivals = await callGemini(state);
+  let festivals: Fest[] = [];
+  let fromCache = false;
+
+  // Check cache first
+  const cachedFestivals = await fetch(`${url}/rest/v1/festivals_cache?state=eq.${state}&expires_at=gte.${new Date().toISOString()}&select=gemini_response`, {
+    headers: { 'Authorization': `Bearer ${key}`, 'apiKey': key }
+  });
+
+  if (cachedFestivals.ok) {
+    const cachedData = await cachedFestivals.json();
+    if (cachedData && cachedData[0] && cachedData[0].gemini_response) {
+      festivals = cachedData[0].gemini_response;
+      fromCache = true;
+      console.log('[festivals-fetch] using cached festivals:', festivals.length);
+    }
+  }
+
+  // If no cache, call Gemini
+  if (!fromCache) {
+    festivals = await callGemini(state);
+    
+    // Store in cache
+    await fetch(`${url}/rest/v1/festivals_cache`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${key}`, 'apiKey': key },
+      body: JSON.stringify({
+        state,
+        gemini_response: festivals,
+        expires_at: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+      })
+    });
+  }
+
+  // Upsert to festivals table
   for (const f of festivals) {
     const upsert = await fetch(`${url}/rest/v1/festivals`, {
       method: 'POST',
@@ -49,7 +82,8 @@ serve(async (req) => {
       console.log('Festival upsert failed', f.name, t);
     }
   }
-  return new Response(JSON.stringify({ state, count: festivals.length }), { headers: { 'content-type': 'application/json' } });
+  
+  return new Response(JSON.stringify({ state, count: festivals.length, fromCache }), { headers: { 'content-type': 'application/json' } });
 });
 
 

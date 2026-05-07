@@ -6,31 +6,61 @@ export default function Explore() {
   const [places, setPlaces] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [cacheStatus, setCacheStatus] = useState<string>('')
 
   async function fetchPlaces() {
     setLoading(true)
-    // Trigger server-side Gemini fetch & upsert
+    setError('')
+    
     try {
-      setError('')
       const base = (import.meta as any).env?.VITE_SUPABASE_URL as string
       const anon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY as string
       const fnBase = base.replace('.supabase.co', '.functions.supabase.co')
+      
       const resp = await fetch(`${fnBase}/places-fetch`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${anon}`, 'apikey': anon },
         body: JSON.stringify({ state })
       })
+      
       if (!resp.ok) {
         const txt = await resp.text()
         throw new Error(txt || `places-fetch failed (${resp.status})`)
       }
-    } catch {}
-    const { data } = await supabase
-      .from('places')
-      .select('place_id,name,short_desc,images')
-      .ilike('state', `%${state}%`)
-      .limit(20)
-    setPlaces(data || [])
+      
+      const result = await resp.json()
+      
+      // Use data directly from the function response for immediate display
+      if (result.places && Array.isArray(result.places)) {
+        setPlaces(result.places)
+        setCacheStatus(result.fromCache ? 'Loaded from cache ⚡' : 'Loaded from API')
+        console.log(`Loaded ${result.places.length} places (fromCache: ${result.fromCache})`)
+      } else {
+        // Fallback to database query if function didn't return places
+        const { data } = await supabase
+          .from('places')
+          .select('place_id,name,short_desc,images')
+          .ilike('state', `%${state}%`)
+          .limit(20)
+        setPlaces(data || [])
+      }
+    } catch (err) {
+      console.error('Error fetching places:', err)
+      setError(err instanceof Error ? err.message : 'Failed to load places')
+      
+      // Fallback to database query on error
+      try {
+        const { data } = await supabase
+          .from('places')
+          .select('place_id,name,short_desc,images')
+          .ilike('state', `%${state}%`)
+          .limit(20)
+        setPlaces(data || [])
+      } catch (dbErr) {
+        console.error('Database fallback failed:', dbErr)
+      }
+    }
+    
     setLoading(false)
   }
 
@@ -60,6 +90,12 @@ export default function Explore() {
             ))}
           </select>
         </div>
+        
+        {cacheStatus && (
+          <div style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.9rem', color: '#666' }}>
+            {cacheStatus}
+          </div>
+        )}
       </section>
 
       {loading && (

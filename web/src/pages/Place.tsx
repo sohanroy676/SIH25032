@@ -8,9 +8,11 @@ export default function Place() {
 
   useEffect(() => {
     (async () => {
+      // First try to get basic data from database for immediate display
       const { data } = await supabase.from('places').select('*').eq('place_id', id).single()
       if (data) setDetail(data)
-      // Also call server to enrich with Gemini details
+      
+      // Then enrich with detailed Gemini information
       try {
         const base = (import.meta as any).env?.VITE_SUPABASE_URL as string
         const anon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY as string
@@ -23,8 +25,11 @@ export default function Place() {
         if (r.ok) {
           const j = await r.json()
           setDetail(j)
+          console.log(`Place detail loaded (fromCache: ${j.fromCache})`)
         }
-      } catch {}
+      } catch (err) {
+        console.error('Error loading place details:', err)
+      }
     })()
   }, [id])
 
